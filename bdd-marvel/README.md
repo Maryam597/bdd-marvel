@@ -10,6 +10,13 @@ SELECT Movies_Title_Movies, Movies_Date_of_Release_Movies FROM `Movies` order by
 
 
 - les noms, prénoms et âges des acteurs ou actrices de plus de 30 ans dans l'ordre alphabétique
+
+
+
+
+
+
+
 - la liste des actrices ou acteurs principaux pour un film donné
 ```sql
 SELECT `Actors`.*, `Played_in_`.*, `Movies`.*
@@ -55,4 +62,6 @@ DELETE FROM `Actors` WHERE `ID_Actors_Actors` = 12
 ```
 
 - afficher les 3 derniers acteurs/actrices ajouté(e)s
-​
+​```sql
+SELECT * FROM `Actors` ORDER BY `ID_Actors_Actors` DESC LIMIT 3
+```
