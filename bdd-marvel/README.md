@@ -77,6 +77,6 @@ DELETE FROM `Actors` WHERE `ID_Actors_Actors` = 12
 
 
 - afficher les 3 derniers acteurs/actrices ajouté(e)s
-​```sql
+```sql
 SELECT * FROM `Actors` ORDER BY `ID_Actors_Actors` DESC LIMIT 3
 ```
