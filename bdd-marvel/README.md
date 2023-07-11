@@ -11,10 +11,6 @@ SELECT Movies_Title_Movies, Movies_Date_of_Release_Movies FROM `Movies` order by
 
 - les noms, prénoms et âges des acteurs ou actrices de plus de 30 ans dans l'ordre alphabétique
 - la liste des actrices ou acteurs principaux pour un film donné
-
-
-- la liste des films pour une actrice ou un acteur donné
-
 ```sql
 SELECT `Actors`.*, `Played_in_`.*, `Movies`.*
 FROM `Actors` 
@@ -22,6 +18,18 @@ FROM `Actors`
     LEFT JOIN `Movies` ON `Played_in_`.`ID_Movies_Movies` = `Movies`.`ID_Movies_Movies`
        WHERE `Played_in_`.`Role` = 'Main'AND `Movies_Title_Movies` = 'Iron Man';
 ```
+
+
+- la liste des films pour une actrice ou un acteur donné
+
+```sql
+SELECT `Movies`.*, `Played_in_`.*, `Actors`.*
+FROM `Movies` 
+    LEFT JOIN `Played_in_` ON `Played_in_`.`ID_Movies_Movies` = `Movies`.`ID_Movies_Movies` 
+    LEFT JOIN `Actors` ON `Played_in_`.`ID_Actors_Actors` = `Actors`.`ID_Actors_Actors`
+       WHERE `Actors_Last_Name_Actors` = 'Rudd';
+```
+
 
 - ajouter un film
 
