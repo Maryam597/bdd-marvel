@@ -47,7 +47,8 @@ FROM `Movies`
 - ajouter un film
 
 ```sql
-INSERT INTO `Actors` (`ID_Actors_Actors`, `Actors_Last_Name_Actors`, `Actors_First_Name_Actors`, `Actors_Roles_Actors`, `Actors_Date_of_Birth_Actors`) VALUES (NULL, 'Evans', 'Chris', 'Captain America', '1981-06-13');
+INSERT INTO `Actors` (`ID_Actors_Actors`, `Actors_Last_Name_Actors`, `Actors_First_Name_Actors`, `Actors_Roles_Actors`, `Actors_Date_of_Birth_Actors`) 
+VALUES (NULL, 'Evans', 'Chris', 'Captain America', '1981-06-13');
 ```
 
 
@@ -55,7 +56,8 @@ INSERT INTO `Actors` (`ID_Actors_Actors`, `Actors_Last_Name_Actors`, `Actors_Fir
 - ajouter une actrice ou un acteur
 
 ```sql
-INSERT INTO `Movies` (`ID_Movies_Movies`, `Movies_Title_Movies`, `Movies_Duration_Movies`, `Movies_Date_of_Release_Movies`) VALUES (NULL, 'Captain America', '02:04:50', '2011-07-19');
+INSERT INTO `Movies` (`ID_Movies_Movies`, `Movies_Title_Movies`, `Movies_Duration_Movies`, `Movies_Date_of_Release_Movies`)
+VALUES (NULL, 'Captain America', '02:04:50', '2011-07-19');
 ```
 
 
