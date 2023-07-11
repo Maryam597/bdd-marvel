@@ -2,10 +2,26 @@
 
 Merci de me fournir ce jeu de requêtes pour tester la bdd :
 - les titres et dates de sortie des films du plus récent au plus ancien
+
+```sql
+
+SELECT Movies_Title_Movies, Movies_Date_of_Release_Movies FROM `Movies` order by Movies_Date_of_Release_Movies ASC;
+```
+
+
 - les noms, prénoms et âges des acteurs ou actrices de plus de 30 ans dans l'ordre alphabétique
 - la liste des actrices ou acteurs principaux pour un film donné
+
+
 - la liste des films pour une actrice ou un acteur donné
 
+```sql
+SELECT `Actors`.*, `Played_in_`.*, `Movies`.*
+FROM `Actors` 
+    LEFT JOIN `Played_in_` ON `Played_in_`.`ID_Actors_Actors` = `Actors`.`ID_Actors_Actors` 
+    LEFT JOIN `Movies` ON `Played_in_`.`ID_Movies_Movies` = `Movies`.`ID_Movies_Movies`
+       WHERE `Played_in_`.`Role` = 'Main'AND `Movies_Title_Movies` = 'Iron Man';
+```
 
 - ajouter un film
 
